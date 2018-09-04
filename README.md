@@ -40,6 +40,12 @@ $ npm run build
 $ npm i --production
 ```
 
+#### pm2 守护程序
+
+```bash
+$ pm2 start npm -n <name> --run start
+```
+
 #### 开启服务端的 server 服务
 
 ```bash
@@ -47,5 +53,9 @@ $ NODE_ENV=production node build/main.js
 ```
 
 ### 前端渲染
+
+127.0.0.1:3000/demo
+
+### 服务器端渲染
 
 127.0.0.1:3000/demo

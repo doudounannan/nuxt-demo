@@ -20,7 +20,11 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  cache: true,
+  loading: {
+    color: '#3B8070',
+    height: '4px'
+  },
   plugins: [
     {
       src: '~/plugins/vue-material',
@@ -34,8 +38,9 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
+    analyze: true,
     extend (config, { isDev, isClient }) {
-      // if (isDev && isClient) {
+      if (isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
@@ -43,8 +48,9 @@ module.exports = {
           exclude: /(node_modules)/
         })
         config.resolve.alias['vue'] = 'vue/dist/vue.common'
-      // }
+      }
     },
-    vendor: ['~/plugins/vue-material', '~/assets/js/demo/index']
+    vendor: ['axios']
+    // vendor: ['~/plugins/vue-material', '~/assets/js/demo/index', 'axios']
   }
 }
