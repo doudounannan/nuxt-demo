@@ -19,7 +19,7 @@ $ npm start
 $ npm run generate
 ```
 
-## ps
+## demo 讲解
 
 本项目使用 material 组件库, 访问路径 127.0.0.1:3000
 
@@ -46,3 +46,6 @@ $ npm i --production
 $ NODE_ENV=production node build/main.js
 ```
 
+### 前端渲染
+
+127.0.0.1:3000/demo
